@@ -36,6 +36,14 @@ class HdHomeRunEpisode
 
 Function Get-HdHomeRunRecording
 {
+    <#
+    .SYNOPSIS
+    .DESCRIPTION
+    .EXAMPLE
+        Get-hdhomeRunRecording | ? title -match "wwe" | Get-HdHomeRunEpisode | Save-HdHomeRunEpisode
+    #>
+    
+    
     [CmdletBinding()]
     param([string] $HdHomeRun = "hdhomerun")
 
@@ -45,6 +53,11 @@ Function Get-HdHomeRunRecording
 
 Function Get-HdHomeRunEpisode
 {
+        <#
+    .SYNOPSIS
+    .DESCRIPTION
+    .EXAMPLE
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
@@ -86,6 +99,13 @@ Function Get-HdHomeRunEpisode
 
 Function Remove-HdHomeRunEpisode
 {
+    <#
+    .SYNOPSIS
+    .DESCRIPTION
+    .NOTES
+    .LINK
+    .EXAMPLE
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
@@ -107,6 +127,14 @@ Function Remove-HdHomeRunEpisode
 }
 
 Function Save-HdHomeRunEpisode{
+        <#
+    .SYNOPSIS
+    .DESCRIPTION
+    .NOTES
+    .LINK
+    .EXAMPLE
+         Get-hdhomeRunRecording | ? title -match "wwe" | Get-HdHomeRunEpisode | Save-HdHomeRunEpisode
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
